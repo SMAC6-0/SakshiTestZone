@@ -40,6 +40,7 @@ class MotorController(Node):
         # init motor angles
         # print(self.motor_1.pos_read(), self.motor_2.pos_read(), self.motor_3.pos_read(), self.motor_4.pos_read(), self.motor_5.pos_read())
         print(self.motor_1.pos_read())
+        print(self.motor_2.pos_read())
 
         self.step_actions = {
             'STEP_FORWARD': self.step_forward,
@@ -92,7 +93,7 @@ class MotorController(Node):
 
     def init_motors(self):
         self.motor_1 = self.servo_bus.get_servo(1)
-        # self.motor_2 = self.servo_bus.get_servo(2)
+        self.motor_2 = self.servo_bus.get_servo(2)
         # self.motor_3 = self.servo_bus.get_servo(3)
         # self.motor_4 = self.servo_bus.get_servo(4)
         # self.motor_5 = self.servo_bus.get_servo(5)
